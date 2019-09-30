@@ -6,16 +6,15 @@ let pw = '';
 //create an alert to set char limit 8-128
 
 //create alert to include special char 
-// let passLength = prompt('how many characters do you want your password to be?');
 
 const specialGen = ['!', '@', '#', '$', '%', '^', '&', '*', '+', '+', '=', '{', '[', '}', ']', '<', '>', '?', '+'];
 
 function generatePassword(){
-  pw =''
+  pw ='';
   for (i = 0; i < document.getElementById("passwordSlide").value; i++){
     //select random specailgen
     pw = pw.concat(specialGen[Math.floor(Math.random() * specialGen.length)]);
-  }
+  };
   document.getElementById("pwBox").innerHTML = pw;
   console.log(pw);
 };
@@ -25,7 +24,18 @@ document.getElementById("genPw").addEventListener('click', generatePassword);
 
 //create an alert to include numbers
 
+const numberGen = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+function generatePassword(){
+  pw ='';
+  for (i = 0; i < document.getElementById("passwordSlide").value; i++){
+    //select random specailgen
+    pw = pw.concat(numberGen[Math.floor(Math.random() * numberGen.length)]);
+  };
+  document.getElementById("pwBox").innerHTML = pw;
+  console.log(pw);
+};
 
+document.getElementById("genPw").addEventListener('click', generatePassword);
 
 //create an alert to include upper case
 
