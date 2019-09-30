@@ -1,30 +1,32 @@
-var pw = "dynopass";
+let pw = '';
 
-function showAlert(){
-  alert("you clicked me");
-  pwBox.innerHTML = pw;
-};
 
-genPw.addEventListener('click', showAlert);
 
 
 //create an alert to set char limit 8-128
 
-
 //create alert to include special char 
-var specialGen = ['!', '@', '#', '$', '%', '^', '&', '*', '+', '+', '=', '{', '[', '}', ']', '<', '>', '?', '+'];
+// let passLength = prompt('how many characters do you want your password to be?');
 
-console.log(Math.floor(Math.random() * specialGen.length));
+const specialGen = ['!', '@', '#', '$', '%', '^', '&', '*', '+', '+', '=', '{', '[', '}', ']', '<', '>', '?', '+'];
 
-console.log(specialGen[Math.floor(Math.random() * specialGen.length)]);
+function generatePassword(){
+  pw =''
+  for (i = 0; i < document.getElementById("passwordSlide").value; i++){
+    //select random specailgen
+    pw = pw.concat(specialGen[Math.floor(Math.random() * specialGen.length)]);
+  }
+  document.getElementById("pwBox").innerHTML = pw;
+  console.log(pw);
+};
+
+document.getElementById("genPw").addEventListener('click', generatePassword);
 
 
 //create an alert to include numbers
-var numGen = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
-for (var i = 0; i < numGen.length; i++){
-  // Math.floor(Math.random() * 10);
-}
+
+
 //create an alert to include upper case
 
 //create an alert to include lower case

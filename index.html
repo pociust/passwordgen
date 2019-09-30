@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frow@3/dist/frow.min.css">
   <title>Password Generator</title>
 </head>
 <body>
-  <!--box to show password-->
-  <div id=pwBox>
-    Password
+  <div class="frow-container">
+    <!--box to show password-->
+    <div id=pwBox>
+      Password
+    </div>
+    <p>Password length:</p>
+    <input id="passwordSlide" type="range" min="8" max="128" value="50">
+    <div class="frow">
+      <!-- button to generate-->
+      <button id="genPw" class="mr-20">
+        Generate Password
+      </button>
+      <!--button to copy to clipboard-->
+      <button>
+        copy to clipboard
+      </button>
+    </div>
+    
   </div>
-  <!-- button to generate-->
-  <button id="genPw">
-    Generate Password
-  </button>
-  <!--button to copy to clipboard-->
-  <button>
-    copy to clipboard
-  </button>
 
   <script src="./app.js"></script>
 </body>
