@@ -16,18 +16,30 @@
     </div>
     <p>Password length:</p>
     <input id="passwordSlide" type="range" min="8" max="128" value="50">
-    <div class="frow">
-      <label class="switch">
+    <div class="frow row-between my-20">
+      <div>
+        <label class="switch">
+            <input id="numberSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <div>Enable numbers</div>
+      </div>
+      <div>
+        <label id="symbolSwitch" class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-      </label>
-        
-      <label class="switch">
+        </label>
+        <div>Enable Special Chacters</div>
+      </div>
+      <div>
+        <label id="capitalizationSwitch" class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-      </label>
+        </label>
+        <div>Enable Capitalization</div>
+      </div>
       <!-- button to generate-->
-      <button id="genPw" class="mr-20">
+      <button id="genPw">
         Generate Password
       </button>
       <!--button to copy to clipboard-->
@@ -35,8 +47,6 @@
         copy to clipboard
       </button>
     </div>
-    
-  </div>
 
   <script src="./app.js"></script>
 </body>
