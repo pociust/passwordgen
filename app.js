@@ -1,35 +1,30 @@
 
-//create alert to include special char 
+//create alert to incluner('click', generatePassword);
 
-
-// function generatePassword(){
-//   pw ='';
-//   for (i = 0; i < document.getElementById("passwordSlide").value; i++){
-//     //select random specailgen
-//     pw = pw.concat(specialGen[Math.floor(Math.random() * specialGen.length)]);
-//   };
-//   document.getElementById("pwBox").innerHTML = pw;
-//   console.log(pw);
-// };
-
-// document.getElementById("genPw").addEventListener('click', generatePassword);
-document.getElementById("genPw").addEventListener('click', generatePassword);
-
-
+let basicPassword = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']; 
 const numberGen = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 const specialGen = ['!', '@', '#', '$', '%', '^', '&', '*', '+', '+', '=', '{', '[', '}', ']', '<', '>', '?', '+'];
 function generatePassword(){
-  if (document.getElementById("numberSwitch").checked && document.getElementById("symbolSwitch").checked){
+  let tempPassword = basicPassword
+  if (document.getElementById("numberSwitch").checked){
+    tempPassword = tempPassword.concat(numberGen);
+    console.log('number' + tempPassword);
+  };
+  
+  if (document.getElementById("symbolSwitch").checked){
+    tempPassword = tempPassword.concat(specialGen);
+    console.log('symbol' + tempPassword);
+  };
+  console.log(tempPassword);
     pw ='';
     for (i = 0; i < document.getElementById("passwordSlide").value; i++){
       //select random specailgen
-      pw = pw.concat(numberGen[Math.floor(Math.random() * numberGen.length)]).concat(specialGen[Math.floor(Math.random() * specialGen.length)]);
+      pw = pw.concat(tempPassword[Math.floor(Math.random() * tempPassword.length)]);
     };
-    console.log(pw);
     document.getElementById("pwBox").innerHTML = pw;
   };
-};
 
+document.getElementById("genPw").addEventListener('click', generatePassword);
 
 
 
