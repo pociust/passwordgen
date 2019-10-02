@@ -1,3 +1,15 @@
+input[type='submit'],
+label {
+    margin-top: 1rem;
+}
+
+label {
+  display: block;
+}
+
+
+/* buttons/slider style */
+
 .switch {
   position: relative;
   display: inline-block;
