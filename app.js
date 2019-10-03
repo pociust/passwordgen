@@ -23,9 +23,34 @@ function generatePassword(){
       //select random specailgen
       pw = pw.concat(tempPassword[Math.floor(Math.random() * tempPassword.length)]);
     };
-    document.getElementById("pwBox").innerHTML = pw;
+    document.getElementById('pwBox').innerHTML = pw;
   };
 
-document.getElementById("genPw").addEventListener('click', generatePassword);
+document.getElementById('genPw').addEventListener('click', generatePassword);
 
 //copy current password to clipboard
+
+function copyClipboard() {
+  var elm = document.getElementById('pwBox');
+  // for Internet Explorer
+
+  if (document.body.createTextRange) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(elm);
+    range.select();
+    document.execCommand('Copy');
+    alert('Copied password to clipboard');
+  } else if (window.getSelection) {
+    // other browsers
+
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(elm);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('Copy');
+    alert("Copied password to clipboard");
+  }
+}
+
+document.getElementById('copyPass').addEventListener('click', copyClipboard);
