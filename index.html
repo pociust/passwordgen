@@ -11,41 +11,46 @@
 <body>
   <div class="frow-container">
     <!--box to show password-->
-    <label id=pwBox>
-      Password
-    </label>
-    <p>Password length:</p>
-    <input id="passwordSlide" type="range" min="8" max="128" value="50">
+    <div class="text-center bg-blue">
+      <label id="pw-box" class="password-box">
+        Password
+      </label>
+    </div>
+    <p>Password Length:</p>
+    <div>
+      <input id="password-slide" type="range" min="8" max="128" value="50">
+      <p># of Characters: <span id="demo"></span></p>
+    </div>
     <div class="frow row-between my-20">
       <div>
         <label class="switch">
-            <input id="numberSwitch" type="checkbox">
+            <input id="number-switch" type="checkbox">
             <span class="slider round"></span>
         </label>
-        <div>Enable numbers</div>
+        <div>Enable Numbers</div>
       </div>
       <div>
         <label class="switch">
-          <input id="symbolSwitch" type="checkbox">
+          <input id="symbol-switch" type="checkbox">
           <span class="slider round"></span>
         </label>
-        <div>Enable Special Chacters</div>
+        <div>Enable Special Characters</div>
       </div>
       <div>
         <label class="switch">
-          <input id="capitalizationSwitch" type="checkbox">
+          <input id="capitalization-switch" type="checkbox">
           <span class="slider round"></span>
         </label>
         <div>Enable Capitalization</div>
       </div>
       <!-- button to generate-->
-      <button id="genPw">
+      <button id="gen-pw">
         Generate Password
       </button>
       <!--button to copy to clipboard-->
-      <button id="copyPass">
-        copy to clipboard
-      </button>
+      <button id="copy-pass">
+          Copy to Clipboard
+        </button>
     </div>
 
   <script src="./app.js"></script>

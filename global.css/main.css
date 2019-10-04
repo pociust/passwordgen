@@ -1,12 +1,16 @@
-input[type='submit'],
-label {
-    margin-top: 1rem;
+body {
+  font-family: sans-serif;
+  margin-top: 15px;
 }
 
-label {
-  display: block;
-}
 
+.password-box {
+  font-size: 20px;
+  color: white;
+  padding: 20px 10px;
+  word-wrap: break-word;
+  background-color: rgb(44, 42, 42);
+}
 
 /* buttons/slider style */
 
